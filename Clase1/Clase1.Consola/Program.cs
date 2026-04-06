@@ -2,39 +2,11 @@
 using Clase1.Logica.Providers;
 using Clase1.Logica.Juego;
 
-int intentosIniciales = 6;
-
-IConsola consola = new ConsolaWrapper();
-IProveedorPalabras proveedor = new ProveedorPalabrasEstatico(new[] { "programacion", "consola", "csharp", "desarrollo", "juego" });
-
-string palabraSecreta = proveedor.ObtenerPalabraAleatoria();
-IJuegoAhorcado juego = new JuegoAhorcado(palabraSecreta, intentosIniciales);
-
-consola.EscribirLinea("Bienvenido al juego del ahorcado.");
-consola.EscribirLinea($"Tendras {intentosIniciales} intentos para adivinar la palabra secreta!");
-consola.EscribirLinea();
-
-while (juego.IntentosRestantes > 0 && !juego.IsGanado)
+class Program
 {
-    consola.EscribirLinea(juego.PalabraEnmascarada.Replace("_", " _"));
-    char letra = consola.LeerTecla();
-    consola.EscribirLinea();
-
-    bool acierto = juego.Adivinar(letra);
-    if (!acierto)
+    static void Main()
     {
-        consola.EscribirLinea("Letra incorrecta. Intentos restantes: " + juego.IntentosRestantes);
+        IJuego juego = new Juego(new Pista(), new Consola());
+        juego.Jugar();
     }
 }
-
-consola.EscribirLinea();
-if (!juego.IsGanado)
-{
-    consola.EscribirLinea($"GAME OVER. Se han utilizado todos los {intentosIniciales} intentos...");
-}
-else
-{
-    consola.EscribirLinea("¡Felicidades! Has adivinado la palabra: " + palabraSecreta);
-}
-
-

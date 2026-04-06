@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Clase1.Logica.Providers;
 
-public interface IProveedorPalabras
+public interface IPista
 {
-    string ObtenerPalabraAleatoria();
+    string Obtener(int secreto, int intento);
 }
