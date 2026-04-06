@@ -6,5 +6,5 @@ namespace Clase1.Logica.Providers;
 
 public interface IPista
 {
-    string Obtener(int secreto, int intento);
+    string ObtenerPista(int secreto, int intento);
 }

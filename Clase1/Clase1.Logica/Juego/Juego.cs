@@ -36,7 +36,7 @@ namespace Clase1.Logica.Juego
                     return true;
                 }
 
-                _consola.Escribir(_pista.Obtener(secreto, intento));
+                _consola.Escribir(_pista.ObtenerPista(secreto, intento));
                 intentos--;
             }
 

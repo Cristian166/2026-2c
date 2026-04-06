@@ -7,7 +7,7 @@ namespace Clase1.Logica.Providers;
 public class Pista : IPista
 {
 
-    public string Obtener(int secreto, int intento)
+    public string ObtenerPista(int secreto, int intento)
     {
         int diff = Math.Abs(secreto - intento);
 
