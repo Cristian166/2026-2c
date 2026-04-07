@@ -27,7 +27,7 @@ namespace Clase1.Logica.Juego
 
             while (intentos > 0)
             {
-                _consola.Escribir("Intento:");
+                _consola.Escribir("Intentos restantes:" + intentos);
                 int intento = int.Parse(_consola.Leer());
 
                 if (intento == secreto)
