@@ -6,7 +6,7 @@ namespace Clase1.Tests;
 public class JuegoAdivinarTest
 {
     [Fact]
-    public void Congelado()
+    public void DadoQueElNumeroEs100YPongo0DaCongelado()
     {
         var pista = new Pista();
         string resultado = pista.ObtenerPista(100, 0);
@@ -14,7 +14,7 @@ public class JuegoAdivinarTest
     }
 
     [Fact]
-    public void Caliente()
+    public void DadoQueElNumeroEs100YPongo97DaCaliente()
     {
         var pista = new Pista();
         string resultado = pista.ObtenerPista(100, 97);
@@ -22,7 +22,7 @@ public class JuegoAdivinarTest
     }
 
     [Fact]
-    public void Tibio()
+    public void DadoQueElNumeroEs100YPongo90DaTibio()
     {
         var pista = new Pista();
         string resultado = pista.ObtenerPista(100, 90);
@@ -30,7 +30,7 @@ public class JuegoAdivinarTest
     }
 
     [Fact]
-    public void Frio()
+    public void DadoQueElNumeroEs100YPongo60DaFrio()
     {
         var pista = new Pista();
         string resultado = pista.ObtenerPista(100, 60);
